@@ -1,0 +1,154 @@
+[exploria_single_page_demo_index.html](https://github.com/user-attachments/files/22309798/exploria_single_page_demo_index.html)
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exploria — Mod Paketiniz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#0f1720;
+      --accent:#7c3aed;
+      --accent-2:#06b6d4;
+      --muted:#98a0aa;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Montserrat,system-ui,Arial;background:linear-gradient(180deg,#081018 0%,#061217 100%);color:#e6eef6;line-height:1.4}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+    header{padding:20px 0;text-align:center;position:relative;z-index:10}
+    nav{display:flex;justify-content:center;gap:20px;margin-top:10px}
+    nav a{color:#fff;text-decoration:none;font-weight:500}
+
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero::before{
+      content:"";
+      background:url('https://i.imgur.com/6rO2K2U.jpeg') center/cover no-repeat;
+      opacity:0.5;
+      position:absolute;top:0;left:0;right:0;bottom:0;
+      z-index:-1;
+      filter:brightness(0.5);
+    }
+    .logo{
+      font-family:'Press Start 2P',monospace;
+      font-size:60px;
+      letter-spacing:2px;
+      color:var(--accent);
+      text-shadow:2px 2px 8px #000;
+      opacity:0;
+      animation: fadeIn 2s forwards 0.5s;
+    }
+    .slogan{
+      font-weight:500;
+      color:#ccc;
+      margin-top:20px;
+      font-size:20px;
+      opacity:0;
+      animation: fadeIn 2s forwards 2s;
+    }
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(20px)}
+      to {opacity:1; transform:translateY(0)}
+    }
+
+    .lead{margin:20px auto;font-size:16px;max-width:800px}
+    .cta{margin-top:30px}
+    .btn{display:inline-block;padding:14px 22px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;font-weight:700;text-decoration:none;margin:0 5px}
+
+    section{padding:60px 0}
+    section h2{text-align:center;margin-bottom:30px}
+
+    .about{max-width:800px;margin:0 auto;text-align:center;color:var(--muted)}
+
+    .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:30px}
+    .feature{background:var(--card);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.05);text-align:center}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .gallery img{width:100%;border-radius:10px;box-shadow:0 0 10px rgba(0,0,0,0.5)}
+
+    .download{text-align:center}
+    .steps{max-width:600px;margin:20px auto;text-align:left;background:var(--glass);padding:20px;border-radius:12px}
+
+    footer{margin-top:40px;padding:20px;text-align:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+    footer a{color:var(--muted);text-decoration:none;margin:0 8px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <a href="#about">Hakkında</a>
+        <a href="#features">Özellikler</a>
+        <a href="#gallery">Görseller</a>
+        <a href="#download">İndir</a>
+        <a href="#contact">İletişim</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="logo">EXPLORIA</div>
+      <div class="slogan">Büyü ve Keşif Dolu Bir Dünya.</div>
+    </section>
+
+    <section id="about">
+      <h2>Hakkında</h2>
+      <p class="about">Exploria, macera tutkunları için hazırlanmış bir Minecraft mod paketidir. Vanilla ruhunu korurken RPG görevleri, büyü sistemleri ve keşif odaklı yeni özelliklerle oyununuzu daha derin ve sürükleyici hale getirir.</p>
+    </section>
+
+    <section id="features">
+      <h2>Özellikler</h2>
+      <div class="features">
+        <div class="feature">
+          <img src="https://i.imgur.com/srY3l87.png" alt="Minecraft biyom" style="width:100%;border-radius:8px;margin-bottom:10px">
+          <h4>Keşif & Yeni Biyomlar</h4>
+          <p>Genişleyen haritalar, gizli mağaralar ve benzersiz biyomlar ile keşif tutkunu oyunculara hitap eder.</p>
+        </div>
+        <div class="feature">
+          <img src="https://i.imgur.com/RRfN5o7.png" alt="Minecraft büyü" style="width:100%;border-radius:8px;margin-bottom:10px">
+          <h4>Büyü & Arcana</h4>
+          <p>Yeni büyü ağaçları, eşyalar ve efektler; savaş ve keşif sırasında strateji katıyor.</p>
+        </div>
+        <div class="feature">
+          <img src="https://i.imgur.com/nZC0b8t.png" alt="Minecraft görev NPC" style="width:100%;border-radius:8px;margin-bottom:10px">
+          <h4>RPG Görevleri</h4>
+          <p>NPC görevleri, seviye sistemi ve ödüllerle vanilla oyununa RPG tadı ekler.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Görseller</h2>
+      <div class="gallery">
+        <img src="https://i.imgur.com/6rO2K2U.jpeg" alt="Minecraft biyom">
+        <img src="https://i.imgur.com/v9vO9N1.jpeg" alt="Minecraft büyü">
+        <img src="https://i.imgur.com/XqNqFNO.jpeg" alt="Minecraft görevler">
+      </div>
+    </section>
+
+    <section id="download">
+      <h2>İndir</h2>
+      <div class="download">
+        <p><strong>Dosya:</strong> Exploria-v1.0.zip · <strong>Boyut:</strong> ~320 MB</p>
+        <p>Uyum: Minecraft 1.20.x — Optifine veya Fabric/Forge uyumludur.</p>
+        <a class="btn" href="https://example.com/download/Exploria-v1.0.zip" download>Direkt İndir</a>
+        <div class="steps">
+          <div><strong>Kurulum:</strong></div>
+          <div>1. Minecraft sürümünü 1.20.x'e ayarlayın.</div>
+          <div>2. Mod loader (Fabric/Forge) kurun.</div>
+          <div>3. Exploria-v1.0.zip içindeki "mods" klasörünü Minecraft dizininize ekleyin.</div>
+          <div>4. Oyunu başlatın ve yeni dünyanızı keşfedin!</div>
+        </div>
